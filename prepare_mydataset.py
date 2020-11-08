@@ -1,22 +1,13 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
-
 
 import os
 import numpy as np
 from PIL import Image
 from matplotlib import pyplot as plt
 import matplotlib.patches as patches
-import os
 
-
-
-
-
-
-# In[6]:
 
 
 path = "300w/"
@@ -25,8 +16,6 @@ path_train_lm = "300w/300w_train_landmarks.txt"
 path_test_image = "300w/helen_testset.txt"
 path_test_lm = "300w/helen_testset_landmarks.txt"
 
-
-# In[2]:
 
 
 def load_images(path, datalist):
@@ -54,6 +43,11 @@ def load_landmarks(path, datalist):
 
 
 def load_train():
+    """ save train dataset files paths in a list
+        @return
+        train_ims: train images file paths list
+        train_lms: train landmarks file paths list
+    """
     train_ims = []
     train_lms = []
     fo = open(path_train_image, "r")
@@ -70,6 +64,11 @@ def load_train():
     return train_ims, train_lms
 
 def load_test():
+    """ save test dataset files paths in a list
+        @return
+        test_ims: test images file paths list
+        test_lms: test landmarks file paths list
+    """
     test_ims = []
     test_lms = []
     fo = open(path_test_image, "r")
@@ -89,12 +88,7 @@ def load_test():
 
 train_im, train_lm = load_train() 
 test_im, test_lm = load_test()
-
 # print(len(train_im), len(test_im))
-
-
-# In[8]:
-
 
 data_train_ims = load_images(path, train_im)
 data_test_ims = load_images(path, test_im)
@@ -115,7 +109,7 @@ def prepare_dataset(save_path, data, lms):
         # fig1,ax1 = plt.subplots(1)
         # ax1.imshow(im)
                
-        # augmenter les donnees
+        ## augmenter les donnees
         lm = lms[n]
         # ax1.plot(lm[:,0],lm[:,1],'r.')
         length = np.max(lm[:,0]) - np.min(lm[:,0])
@@ -130,10 +124,7 @@ def prepare_dataset(save_path, data, lms):
         
         # rect = patches.Rectangle((np.min(lm[:,0])- 0.15*length, np.min(lm[:,1])-0.15*width), length, width, linewidth=2,edgecolor='r',fill=None, alpha=1)
         # ax1.add_patch(rect)
-        
-        # plt.show()
-        
-        
+        # plt.show()       
         
         im1 = im.crop((left, top, right, bottom)) 
         w,h = im1.size
@@ -153,6 +144,7 @@ def prepare_dataset(save_path, data, lms):
         
         np.save(save_path+str(n)+".npy", lm)
         # ax2.plot(lm[:,0],lm[:,1],'r.')
+        
     print("------------------> my dateset prepared successfully!")
  
 def calculate_moyen(path, lms):
@@ -221,8 +213,5 @@ np.save(path_test+"test_pts_moyens.npy", pt_moyen_test)
 
 # decomment to visualise my dataset
 # visualise_mydataset(path_train, path_test)
-# In[ ]:
-
-
 
 
