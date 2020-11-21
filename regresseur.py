@@ -2,7 +2,7 @@
 """
 Created on Sun Nov  8 23:04:04 2020
 
-@author: HASEE
+@author: SHI Mengmeng
 """
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
