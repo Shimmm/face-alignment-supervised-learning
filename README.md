@@ -11,6 +11,15 @@ Je souhaite accélerer la vitesse de l'apprentissage, pour reduire la volume de 
 ## regresseur.py
 Une class de Cascade de regresseur linéaire se trouve dans ce fichier, la méthode de fit, save_model de la classe nous permet d'entraîner et enregistrer le model. 
 En utilisant la méthode save_model, il va enregistrer un fichier de R et un de A, ils sont tous sous format de .npy
+```python
+from regresseur import Cascade, descriptor
+
+...load dataset...
+n_iter = 5
+myCascade = Cascade()
+myCascade.fit(image_set, model_moyen, landmarks_set, n_iter=n_iter)
+myCascade.save_model()
+```
 
 ## train_test.py
 Il contient deux fonciton train et test, train s'occupent de instancier un model de cascade et le faire apprendre, test va tester la performance du model en utilisant la base fournie.
