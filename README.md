@@ -28,9 +28,9 @@ Il contient deux fonciton train et test, train s'occupent de instancier un model
 Voici un exemple de 5 iterations:
 
 
-![iteration 1](/exemple/iter1.png?raw=true)
-<img src="/exemple/iter1.png" alt="drawing" width="100"/>
-![iteration 2](/exemple/iter2.png?raw=true)
-![iteration 3](/exemple/iter3.png?raw=true)
-![iteration 4](/exemple/iter4.png?raw=true)
-![iteration 5](/exemple/iter5.png?raw=true)
+<img src="/exemple/iter1.png" alt="iteration 1" width="300"/>
+<img src="/exemple/iter2.png" alt="iteration 2" width="300"/>
+<img src="/exemple/iter3.png" alt="iteration 3" width="300"/>
+<img src="/exemple/iter4.png" alt="iteration 4" width="300"/>
+<img src="/exemple/iter5.png" alt="iteration 5" width="300"/>
+
