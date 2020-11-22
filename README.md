@@ -26,8 +26,8 @@ Il contient deux fonciton train et test, train s'occupent de instancier un model
 
 ## resultat
 Voici un exemple de 5 iterations:
-![alt text](https://github.com/Shimmm/face-alignment-supervised-learning/tree/main/exemple/iter1.png)
-![alt text](https://github.com/Shimmm/face-alignment-supervised-learning/tree/main/exemple/iter2.png)
-![alt text](https://github.com/Shimmm/face-alignment-supervised-learning/tree/main/exemple/iter3.png)
-![alt text](https://github.com/Shimmm/face-alignment-supervised-learning/tree/main/exemple/iter4.png)
-![alt text](https://github.com/Shimmm/face-alignment-supervised-learning/tree/main/exemple/iter5.png)
+![alt text](https://github.com/Shimmm/face-alignment-supervised-learning/tree/main/exemple/iter1.png?raw=true)
+![alt text](https://github.com/Shimmm/face-alignment-supervised-learning/tree/main/exemple/iter2.png?raw=true)
+![alt text](https://github.com/Shimmm/face-alignment-supervised-learning/tree/main/exemple/iter3.png?raw=true)
+![alt text](https://github.com/Shimmm/face-alignment-supervised-learning/tree/main/exemple/iter4.png?raw=true)
+![alt text](https://github.com/Shimmm/face-alignment-supervised-learning/tree/main/exemple/iter5.png?raw=true)
