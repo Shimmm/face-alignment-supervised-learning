@@ -23,3 +23,6 @@ myCascade.save_model()
 
 ## train_test.py
 Il contient deux fonciton train et test, train s'occupent de instancier un model de cascade et le faire apprendre, test va tester la performance du model en utilisant la base fournie.
+
+## resultat
+![alt text](https://github.com/Shimmm/face-alignment-supervised-learning/exemple/iter1.png)
