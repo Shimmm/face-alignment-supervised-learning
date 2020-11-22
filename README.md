@@ -28,7 +28,7 @@ Il contient deux fonciton train et test, train s'occupent de instancier un model
 Voici un exemple de 5 iterations:
 
 
-![Screenshot](/exemple/iter1.png?raw=true = 100x100)
+![Screenshot](/exemple/iter1.png=100x100)
 ![Screenshot](/exemple/iter2.png?raw=true)
 ![Screenshot](/exemple/iter3.png?raw=true)
 ![Screenshot](/exemple/iter4.png?raw=true)
