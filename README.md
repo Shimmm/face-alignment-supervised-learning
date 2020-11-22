@@ -25,4 +25,9 @@ myCascade.save_model()
 Il contient deux fonciton train et test, train s'occupent de instancier un model de cascade et le faire apprendre, test va tester la performance du model en utilisant la base fournie.
 
 ## resultat
-![alt text](https://github.com/Shimmm/face-alignment-supervised-learning/exemple/iter1.png)
+Voici un exemple de 5 iterations:
+![alt text](https://github.com/Shimmm/face-alignment-supervised-learning/tree/main/exemple/iter1.png)
+![alt text](https://github.com/Shimmm/face-alignment-supervised-learning/tree/main/exemple/iter2.png)
+![alt text](https://github.com/Shimmm/face-alignment-supervised-learning/tree/main/exemple/iter3.png)
+![alt text](https://github.com/Shimmm/face-alignment-supervised-learning/tree/main/exemple/iter4.png)
+![alt text](https://github.com/Shimmm/face-alignment-supervised-learning/tree/main/exemple/iter5.png)
