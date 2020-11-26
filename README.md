@@ -31,3 +31,7 @@ Voici un exemple de 5 iterations:
 <img src="/exemple/iter1.png" alt="iteration 1" width="300"/> <img src="/exemple/iter2.png" alt="iteration 2" width="300"/> <img src="/exemple/iter3.png" alt="iteration 3" width="300"/>
 <img src="/exemple/iter4.png" alt="iteration 4" width="300"/> <img src="/exemple/iter5.png" alt="iteration 5" width="300"/>
 
+
+Quelques tests sur mes photos
+<img src="/exemple/11.png" alt="test" width="300"/> <img src="/exemple/14.png" alt="test" width="300"/> <img src="/exemple/18.png" alt="test" width="300"/>
+
