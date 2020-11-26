@@ -2,7 +2,7 @@
 """
 Created on Wed Nov 18 11:22:32 2020
 
-@author: HASEE
+@author: SHI Mengmeng
 """
 import os
 import numpy as np
@@ -10,7 +10,7 @@ import cv2
 from regresseur import descriptor
 import matplotlib.pyplot as plt
 
-path_img = "mydataset/mydataset/" # path de mes images
+path_img = "mydataset/my_images/" # path de mes images
 path_train = "mydataset/train/" # path de train pour avoir le modele moyen
 pt_moyen = np.load(path_train+"train_pts_moyens.npy") # cahrger le modele poyen
 
