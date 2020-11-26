@@ -14,6 +14,17 @@ import cv2
 
 
 class Cascade:
+    """
+    Une Cascade de regresseur lineair pour l'alignement des points caracteristiques du visage
+    Qs = X.R + b = Y.R
+    Y: un ensemble de descripteurs X avec une colonne en plus de 1 
+    R: le coeff, contenant b
+    A: le pca
+    
+    Remarque: cette classe a deux types de fit, je veux comparer les deux
+    fit: un apprentissage avec calcul de R
+    fit2: un apprentissage avec un modele lineair de sklearn
+    """
     
     def __init__(self):
 
@@ -45,8 +56,8 @@ class Cascade:
     def oneStepAlignment(self, img, pts_opt, pts_pre):
         
         X = descriptor(pts_pre, img, self.sift)
-        print(X.shape)
         pts_pre = pts_pre.reshape((pts_pre.shape[0], pts_pre.shape[1]*pts_pre.shape[2]))
+        
         X_c, A = self.reduction_pca(X)
         print("A shape:", A.shape)
         Qs_star = pts_opt - pts_pre
@@ -82,7 +93,7 @@ class Cascade:
     def fit2(self,  img_set, moy, landmarks_set, n_iter=5):
         
         for _ in range(n_iter):
-            X0 = descriptor(moy, img_set)
+            X0 = descriptor(moy, img_set, self.sift)
             X0, a = self.reduction_pca(X0)
             moy = moy.reshape((moy.shape[0], 68*2))
 
@@ -91,29 +102,32 @@ class Cascade:
             clf.fit(X0, Qs_star)
             R0 = clf.coef_
             b0 = clf.intercept_
-            r = np.concatenate((b0, R0))
+            b0 = b0.reshape([1, R0.shape[0]])
+            r = np.concatenate((b0, R0.T), axis=0)
             
             Y = np.concatenate((np.ones((X0.shape[0],1)), X0), axis=1)
             Qs0 = self.predict(Y, r)
             moy = self.majPoints(moy, Qs0)
+            moy = moy.reshape([moy.shape[0], 68, 2])
             
             self.R.append(r)
             self.A.append(a)
         
  
     def save_model(self):
-        np.save("mydataset/R3.npy", np.array(self.R))
-        np.save("mydataset/A3.npy", np.array(self.A))
+        np.save("mydataset/R.npy", np.array(self.R))
+        np.save("mydataset/A.npy", np.array(self.A))
         print(np.array(self.R).shape)
 
 
 def descriptor(pts, img, sift):
     
     descr = []
-    # after an iterration, the points deplacement has same elements as images
     for i in range(pts.shape[0]):
         descripteur = None
-        im = img[i%img.shape[0]]
+        im = img[i%img.shape[0]] # nombre de images est toujours 3148
+        
+        # les parametres pour calculer les bords depasse pas les perturbations
         bottom = int(max(128, max(pts[i,:,1])+20)) - 128
         right = int(max(128, max(pts[i,:,0])+20)) - 128
 
