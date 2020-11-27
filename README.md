@@ -24,16 +24,15 @@ myCascade.save_model()
 ## train_test.py
 Il contient deux fonciton train et test, train s'occupent de instancier un model de cascade et le faire apprendre, test va tester la performance du model en utilisant la base fournie.
 
-## resultat
 Voici un exemple de 5 iterations:
 
 
 <img src="/exemple/iter1.png" alt="iteration 1" width="200"/> <img src="/exemple/iter2.png" alt="iteration 2" width="200"/> <img src="/exemple/iter3.png" alt="iteration 3" width="200"/>
 <img src="/exemple/iter4.png" alt="iteration 4" width="200"/> <img src="/exemple/iter5.png" alt="iteration 5" width="200"/>
 
+## test_my.py
+Ce fichier consiste à faire des tests sur vos propre images, voici quelques tests sur mes photos:
 
-Quelques tests sur mes photos:
-
-
-<img src="/exemple/11.png" alt="test" width="200"/> <img src="/exemple/14.png" alt="test" width="200"/> <img src="/exemple/18.png" alt="test" width="200"/>
+<img src="/exemple/test1.png" alt="test" width="200"/> <img src="/exemple/test5.png" alt="test" width="200"/> <img src="/exemple/test2.png" alt="test" width="200"/>
+<img src="/exemple/11.png" alt="test" width="200"/> <img src="/exemple/test4.png" alt="test" width="200"/> <img src="/exemple/test6.png" alt="test" width="200"/>
 
