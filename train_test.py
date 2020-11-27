@@ -97,9 +97,9 @@ def test_cascade():
 
         print("========> Iteration ", str(i+1))
     
-    
-    err = mean_squared_error(Qs_test, Qs_star)
-    print('Mean Squared Error :', err)
+        Qs_star = Qs_star.reshape(Qs_test.shape)
+        err = mean_squared_error(Qs_test, Qs_star)
+        print('Mean Squared Error :', err)
 
 # train_cascade()
 test_cascade()
