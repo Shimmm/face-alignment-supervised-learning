@@ -63,8 +63,8 @@ def test_cascade(image_set, pt_moyen):
     pts_moyen = np.repeat(pt_moyen[np.newaxis, :, :], image_set.shape[0], axis=0)
 
     # charger R et A
-    R = np.load("mydataset/R3.npy")
-    A = np.load("mydataset/A3.npy")
+    R = np.load("mydataset/R.npy")
+    A = np.load("mydataset/A.npy")
     
     # descripteur
     sift = cv2.xfeatures2d.SIFT_create()
